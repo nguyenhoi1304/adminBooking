@@ -1,0 +1,75 @@
+.table {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+}
+
+td,
+th {
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0;
+}
+th {
+  background-color: rgb(23, 167, 167);
+  color: white;
+}
+
+td {
+  padding: 0 20px;
+}
+
+.title-hotel {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px 0 50px;
+}
+
+.btn-add {
+  list-style: none;
+  border: 1px solid #85d86c;
+  border-radius: 5px;
+  color: #85d86c;
+  background-color: white;
+  padding: 10px 20px;
+}
+.btn-add:hover {
+  cursor: pointer;
+  background-color: #85d86c;
+  color: white;
+}
+.btn_upload {
+  padding: 15px 7px;
+  background-color: rgb(54, 50, 50);
+  color: white;
+  border: none;
+  margin: 15px 0px;
+  font-size: 1rem;
+}
+textarea {
+  padding: 10px;
+}
+
+.btn_submit {
+  text-align: center;
+  color: white;
+  background-color: #226825;
+  border: none;
+  padding: 10px 60px;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+.btn_submit:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#rooms {
+  width: 100vh;
+  height: 100px;
+}
+.input_rooms {
+  width: 100%;
+  height: 40px;
+  word-wrap: break-word;
+}

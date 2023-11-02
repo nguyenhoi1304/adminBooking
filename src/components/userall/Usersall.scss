@@ -1,0 +1,52 @@
+.table {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+}
+
+td,
+th {
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0;
+}
+th {
+  background-color: rgb(23, 167, 167);
+  color: white;
+}
+
+td {
+  padding: 0 20px;
+}
+
+.title-hotel {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px 0 50px;
+}
+
+.btn-add {
+  list-style: none;
+  border: 1px solid #85d86c;
+  border-radius: 5px;
+  color: #85d86c;
+  background-color: white;
+  padding: 10px 20px;
+}
+.btn-add:hover {
+  cursor: pointer;
+  background-color: #85d86c;
+  color: white;
+}
+
+.table .btn_delete {
+  border: 1px dashed red;
+  color: red;
+  padding: 3px 5px;
+}
+
+.table .btn_delete:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
