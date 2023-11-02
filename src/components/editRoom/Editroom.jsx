@@ -123,7 +123,7 @@ const Editroom = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const roomNumbers = rooms.split(",");
+    const roomNumbers = rooms?.split(",");
     axios
       .put(`https://booking-backend-s33n.onrender.com/api/rooms/${roomId}`, {
         ...dataValue,
