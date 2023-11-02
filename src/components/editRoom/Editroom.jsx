@@ -123,6 +123,7 @@ const Editroom = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(rooms);
     const roomNumbers = rooms?.split(",");
     axios
       .put(`https://booking-backend-s33n.onrender.com/api/rooms/${roomId}`, {
@@ -185,6 +186,7 @@ const Editroom = () => {
               <section>
                 <div>
                   <p>Rooms</p>
+                  <p>You need something in here!</p>
                   <textarea
                     onChange={(e) => setRooms(e.target.value)}
                     placeholder="give comma between room numbers."
