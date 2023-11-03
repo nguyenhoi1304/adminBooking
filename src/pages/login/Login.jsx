@@ -48,9 +48,6 @@ const Login = () => {
         <button onClick={handleClick} className="lButton">
           Login
         </button>
-        <Link to="/register" style={{ textAlign: "center", opacity: "0.7" }}>
-          <span>Create Account</span>
-        </Link>
       </div>
     </div>
   );

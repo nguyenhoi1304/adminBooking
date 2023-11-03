@@ -19,7 +19,6 @@ const Transaction = () => {
     };
     getTransaction();
   }, []);
-  console.log(data);
 
   return (
     <div className="home">

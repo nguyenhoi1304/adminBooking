@@ -9,9 +9,12 @@ import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import img from "../../img/banner.jpg";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
+
+  const nameUser = localStorage.getItem("USER__ARRAY");
 
   return (
     <div className="navbar">
@@ -48,6 +51,14 @@ const Navbar = () => {
           <div className="item">
             <img src={img} alt="" className="avatar" />
           </div>
+          {nameUser && (
+            <div className="item">
+              {nameUser}
+              <NavLink to="/">
+                <button className="btn_logout">LogOut</button>
+              </NavLink>
+            </div>
+          )}
         </div>
       </div>
     </div>

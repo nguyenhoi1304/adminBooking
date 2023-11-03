@@ -34,17 +34,22 @@ const Widget = ({ type }) => {
       });
   }, []);
 
-  //Tổng số danh thu
-  const totalRevenue = amountOrders?.reduce((cur, pre) => {
-    return cur.price + pre.price;
+  const number = [];
+  amountOrders?.map((item) => {
+    return number.push(item.price);
   });
-
-  //danh thu TB hằng tháng
-  const AverageRevenue = totalRevenue / 30;
-
   // Số lượng users
   const countUsers = amountUser?.length;
+
+  // Số lượng order
   const countOrders = amountOrders?.length;
+
+  //Tổng số danh thu
+  const totalRevenue =
+    number.length > 0 && number?.reduce((cur, prev) => cur + prev);
+
+  //danh thu TB hằng tháng
+  const AverageRevenue = (totalRevenue / 30).toFixed(3);
 
   switch (type) {
     case "user":
