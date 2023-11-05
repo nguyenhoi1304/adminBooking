@@ -15,9 +15,6 @@ const Usersall = () => {
       <hr />
       <div className="title-hotel">
         <h1>User List</h1>
-        <NavLink to="/add-hotel">
-          <button className="btn-add">Add New</button>
-        </NavLink>
       </div>
       <table className="table">
         <tr>
