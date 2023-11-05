@@ -9,7 +9,9 @@ const LatestTransaction = (props) => {
   useEffect(() => {
     const getTransaction = async () => {
       await axios
-        .get("http://localhost:5000/api/transaction/transaction-latest")
+        .get(
+          "https://booking-backend-s33n.onrender.com/api/transaction/transaction-latest"
+        )
         .then(function (response) {
           setData(response.data);
         })

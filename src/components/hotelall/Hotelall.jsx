@@ -14,13 +14,13 @@ const Hotelall = () => {
   //Lấy dữ liệu ra 1 lần để hiển thị
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/hotels/allhotel`)
+      .get(`https://booking-backend-s33n.onrender.com/api/hotels/allhotel`)
       .then((res) => setDataList(res.data));
   }, []);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/transaction`)
+      .get(`https://booking-backend-s33n.onrender.com/api/transaction`)
       .then((res) => setDataTransaction(res.data));
   }, []);
 
@@ -40,7 +40,9 @@ const Hotelall = () => {
         const newData = dataList.filter((item) => item._id !== _id);
         // xóa ở phía sever
         const deleteHotel = async () => {
-          await axios.delete(`http://localhost:5000/api/hotels/find/${_id}`);
+          await axios.delete(
+            `https://booking-backend-s33n.onrender.com/api/hotels/find/${_id}`
+          );
         };
         deleteHotel();
         //cập nhật dữ liệu mới đã xóa

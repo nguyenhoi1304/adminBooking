@@ -9,7 +9,7 @@ const Transaction = () => {
   useEffect(() => {
     const getTransaction = async () => {
       await axios
-        .get("http://localhost:5000/api/transaction")
+        .get("https://booking-backend-s33n.onrender.com/api/transaction")
         .then(function (response) {
           setData(response.data);
         })

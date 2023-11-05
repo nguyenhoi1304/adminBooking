@@ -16,7 +16,7 @@ const Widget = ({ type }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get("https://booking-backend-s33n.onrender.com/api/users")
       .then((res) => setAmountUser(res.data))
       .catch(function (error) {
         console.log(error);
@@ -25,7 +25,9 @@ const Widget = ({ type }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/transaction/transaction-latest")
+      .get(
+        "https://booking-backend-s33n.onrender.com/api/transaction/transaction-latest"
+      )
       .then((res) => setAmountOrders(res.data))
       .catch(function (error) {
         console.log(error);

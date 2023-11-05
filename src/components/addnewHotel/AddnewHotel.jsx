@@ -111,7 +111,9 @@ const AddnewHotel = () => {
     setRooms(value);
   };
 
-  const { data } = useFetchApi("http://localhost:5000/api/rooms");
+  const { data } = useFetchApi(
+    "https://booking-backend-s33n.onrender.com/api/rooms"
+  );
 
   //Xử lý selectOptions Featured
   const handleChangeFeatured = (event) => {
@@ -170,7 +172,7 @@ const AddnewHotel = () => {
     e.preventDefault();
     if (validate) {
       axios
-        .post("http://localhost:5000/api/hotels", newHotel)
+        .post("https://booking-backend-s33n.onrender.com/api/hotels", newHotel)
         .then(function (response) {
           if (response.data) {
             alert("tạo hotel thành công");

@@ -89,7 +89,9 @@ const Addroomnew = () => {
 
   const navigation = useNavigate("");
 
-  const { data } = useFetchApi("http://localhost:5000/api/hotels/allhotel");
+  const { data } = useFetchApi(
+    "https://booking-backend-s33n.onrender.com/api/hotels/allhotel"
+  );
 
   //Xử lý lấy value theo name
   const handleChangeValues = (e) => {
@@ -123,7 +125,7 @@ const Addroomnew = () => {
     console.log(roomNumbers);
     if (validate) {
       axios
-        .post(`http://localhost:5000/api/rooms/${roomId}`, {
+        .post(`https://booking-backend-s33n.onrender.com/api/rooms/${roomId}`, {
           ...dataValue,
           roomNumbers,
         })
