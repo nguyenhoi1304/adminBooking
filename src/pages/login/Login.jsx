@@ -11,7 +11,7 @@ const Login = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     await axios
-      .post("https://booking-backend-s33n.onrender.com/api/auth/login", {
+      .post("http://localhost:5000/api/auth/login", {
         username: username,
         password: password,
       })

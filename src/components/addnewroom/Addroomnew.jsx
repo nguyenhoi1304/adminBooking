@@ -89,9 +89,7 @@ const Addroomnew = () => {
 
   const navigation = useNavigate("");
 
-  const { data } = useFetchApi(
-    "https://booking-backend-s33n.onrender.com/api/hotels/allhotel"
-  );
+  const { data } = useFetchApi("http://localhost:5000/api/hotels/allhotel");
 
   //Xử lý lấy value theo name
   const handleChangeValues = (e) => {
@@ -121,11 +119,11 @@ const Addroomnew = () => {
   //xử lý gửi dữ liệu đi
   const handleSubmit = (e) => {
     e.preventDefault();
-    const roomNumbers = rooms.split(",");
+    const roomNumbers = rooms?.split(",");
     console.log(roomNumbers);
     if (validate) {
       axios
-        .post(`https://booking-backend-s33n.onrender.com/api/rooms/${roomId}`, {
+        .post(`http://localhost:5000/api/rooms/${roomId}`, {
           ...dataValue,
           roomNumbers,
         })
@@ -133,6 +131,7 @@ const Addroomnew = () => {
           console.log(response.data);
           if (response.data) {
             alert("tạo room thành công");
+            navigation("/rooms");
           }
         })
         .catch(function (error) {

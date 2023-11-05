@@ -92,15 +92,13 @@ const Editroom = () => {
     price: "",
   });
 
-  const { data } = useFetchApi(
-    "https://booking-backend-s33n.onrender.com/api/hotels/allhotel"
-  );
+  const { data } = useFetchApi("http://localhost:5000/api/hotels/allhotel");
 
   //Lấy dữ liệu ra 1 lần để hiển thị
   useEffect(() => {
     const getRooms = async () => {
       await axios
-        .get(`https://booking-backend-s33n.onrender.com/api/rooms/${roomId}`)
+        .get(`http://localhost:5000/api/rooms/${roomId}`)
         .then((res) => {
           setDataValue({
             ...res.data,
@@ -126,7 +124,7 @@ const Editroom = () => {
     console.log(rooms);
     const roomNumbers = rooms?.split(",");
     axios
-      .put(`https://booking-backend-s33n.onrender.com/api/rooms/${roomId}`, {
+      .put(`http://localhost:5000/api/rooms/${roomId}`, {
         ...dataValue,
         roomNumbers,
       })

@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const Usersall = () => {
   const tables = ["Id", "Name", "Password", "Email"];
   const { data, resetFetchApi } = useFetchApi(
-    "https://booking-backend-s33n.onrender.com/api/users"
+    "http://localhost:5000/api/users"
   );
 
   return (

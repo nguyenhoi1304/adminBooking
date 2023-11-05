@@ -18,7 +18,7 @@ const Roomall = () => {
   useEffect(() => {
     const getRooms = async () => {
       await axios
-        .get(`https://booking-backend-s33n.onrender.com/api/rooms`)
+        .get(`http://localhost:5000/api/rooms`)
         .then((res) => setDataList(res.data));
     };
     getRooms();
@@ -30,9 +30,7 @@ const Roomall = () => {
       const newData = dataList.filter((item) => item._id !== _id);
       // xóa ở phía sever
       const deleteHotel = async () => {
-        await axios.delete(
-          `https://booking-backend-s33n.onrender.com/api/rooms/${_id}`
-        );
+        await axios.delete(`http://localhost:5000/api/rooms/${_id}`);
       };
       deleteHotel();
       //cập nhật dữ liệu mới đã xóa

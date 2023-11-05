@@ -108,9 +108,7 @@ const EditHotel = () => {
   useEffect(() => {
     const getRooms = async () => {
       await axios
-        .get(
-          `https://booking-backend-s33n.onrender.com/api/hotels/find/${hotelId}`
-        )
+        .get(`http://localhost:5000/api/hotels/find/${hotelId}`)
         .then((res) => {
           setDataValue({
             ...res.data,
@@ -137,9 +135,7 @@ const EditHotel = () => {
     setRooms(value);
   };
 
-  const { data } = useFetchApi(
-    "https://booking-backend-s33n.onrender.com/api/rooms"
-  );
+  const { data } = useFetchApi("http://localhost:5000/api/rooms");
 
   //Xử lý lấy value theo name
   const handleChangeValues = (e) => {
@@ -160,7 +156,7 @@ const EditHotel = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`https://booking-backend-s33n.onrender.com/api/hotels/${hotelId}`, {
+      .put(`http://localhost:5000/api/hotels/${hotelId}`, {
         ...dataValue,
       })
       .then(function (response) {
